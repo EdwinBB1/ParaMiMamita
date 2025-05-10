@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1c1c1c, #2e2e2e);
+    color: #ffb6c1;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contenedor {
+    padding: 30px;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffb6c1;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff69b4;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.flor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('flor.png');
+    background-size: cover;
+    opacity: 0.8;
+    animation: caer 10s linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
